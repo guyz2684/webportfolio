@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="neonYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fdba74" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle with glow -->
+  <circle cx="250" cy="250" r="230" fill="url(#bgGrad)" />
+  <circle cx="250" cy="250" r="225" fill="none" stroke="url(#neonBlue)" stroke-width="4" opacity="0.6" />
+  
+  <!-- Ambient glow spheres -->
+  <circle cx="120" cy="140" r="90" fill="#38bdf8" opacity="0.18" filter="url(#glow)" />
+  <circle cx="380" cy="360" r="110" fill="#f59e0b" opacity="0.22" filter="url(#glow)" />
+
+  <!-- Grid decoration pattern -->
+  <g opacity="0.1" stroke="#38bdf8" stroke-width="1">
+    <line x1="50" y1="150" x2="450" y2="150" />
+    <line x1="50" y1="250" x2="450" y2="250" />
+    <line x1="50" y1="350" x2="450" y2="350" />
+    <line x1="150" y1="50" x2="150" y2="450" />
+    <line x1="250" y1="50" x2="250" y2="450" />
+    <line x1="350" y1="50" x2="350" y2="450" />
+  </g>
+
+  <!-- Shoulders & Body / Stylish Hoodie -->
+  <path d="M120 480 C120 370 170 350 250 350 C330 350 380 370 380 480 Z" fill="#1e1b4b" />
+  <path d="M185 365 L250 480 L315 365 Z" fill="#312e81" opacity="0.8" />
+  <!-- Neon zipper / accents -->
+  <line x1="250" y1="365" x2="250" y2="475" stroke="url(#neonYellow)" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Neck -->
+  <rect x="225" y="270" width="50" height="70" rx="8" fill="url(#skinGrad)" />
+  <rect x="225" y="280" width="50" height="20" fill="#ea580c" opacity="0.15" />
+
+  <!-- Head / Face -->
+  <ellipse cx="250" cy="220" rx="65" ry="75" fill="url(#skinGrad)" />
+
+  <!-- Hair (Creative & Modern hairstyle) -->
+  <path d="M175 210 C175 140 210 120 250 120 C290 120 325 140 325 210 C325 190 310 160 280 155 C240 150 200 170 175 210 Z" fill="#0f172a" />
+  <path d="M190 145 C230 110 290 115 315 150 C300 135 260 130 220 145 Z" fill="url(#neonBlue)" opacity="0.5" />
+
+  <!-- Modern Glasses (Creative Designer look) -->
+  <rect x="195" y="200" width="45" height="30" rx="10" fill="none" stroke="url(#neonYellow)" stroke-width="4" />
+  <rect x="260" y="200" width="45" height="30" rx="10" fill="none" stroke="url(#neonYellow)" stroke-width="4" />
+  <line x1="240" y1="213" x2="260" y2="213" stroke="url(#neonYellow)" stroke-width="4" />
+  <line x1="180" y1="210" x2="195" y2="210" stroke="url(#neonYellow)" stroke-width="3" />
+  <line x1="305" y1="210" x2="320" y2="210" stroke="url(#neonYellow)" stroke-width="3" />
+  <ellipse cx="217" cy="215" rx="6" ry="6" fill="#38bdf8" opacity="0.7" />
+  <ellipse cx="282" cy="215" rx="6" ry="6" fill="#38bdf8" opacity="0.7" />
+
+  <!-- Friendly Smile & Nose -->
+  <path d="M245 238 L250 248 L242 250" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M232 265 Q250 280 268 265" fill="none" stroke="#9a3412" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Audio Studio Headphone -->
+  <path d="M170 195 C165 140 210 110 250 110 C290 110 335 140 330 195" fill="none" stroke="url(#neonBlue)" stroke-width="8" stroke-linecap="round" />
+  <rect x="165" y="190" width="18" height="45" rx="8" fill="url(#neonYellow)" />
+  <rect x="317" y="190" width="18" height="45" rx="8" fill="url(#neonYellow)" />
+
+  <!-- Creative Sparkles / Geometric UI marks -->
+  <g fill="url(#neonYellow)">
+    <polygon points="390,140 395,155 410,160 395,165 390,180 385,165 370,160 385,155" />
+    <circle cx="100" cy="280" r="5" />
+    <circle cx="410" cy="290" r="4" fill="#38bdf8" />
+    <polygon points="90,180 94,190 104,194 94,198 90,208 86,198 76,194 86,190" />
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p6Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="p6Code" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <filter id="p6Glow">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#p6Bg)" />
+
+  <!-- Ambient Light -->
+  <circle cx="150" cy="150" r="100" fill="#0284c7" opacity="0.25" filter="url(#p6Glow)" />
+  <circle cx="480" cy="250" r="120" fill="#f59e0b" opacity="0.2" filter="url(#p6Glow)" />
+
+  <!-- Browser Window Mockup -->
+  <g transform="translate(60, 45)">
+    <!-- Browser Frame with Glass Effect -->
+    <rect width="480" height="295" rx="14" fill="#090d16" stroke="#334155" stroke-width="2" />
+    
+    <!-- Window Header -->
+    <rect width="480" height="38" rx="14" fill="#1e293b" />
+    <path d="M 0 24 H 480 V 38 H 0 Z" fill="#1e293b" />
+    <!-- Window Controls -->
+    <circle cx="22" cy="19" r="5" fill="#ef4444" />
+    <circle cx="38" cy="19" r="5" fill="#f59e0b" />
+    <circle cx="54" cy="19" r="5" fill="#10b981" />
+    
+    <!-- URL Bar -->
+    <rect x="90" y="10" width="300" height="18" rx="9" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="110" y="23" font-family="monospace" font-size="10" fill="#94a3b8">https://creative-agency.dev/immersive</text>
+
+    <!-- Inside Web Canvas / Layout -->
+    <!-- Left Hero Area -->
+    <text x="35" y="85" font-family="sans-serif" font-weight="900" font-size="22" fill="#ffffff">NEXT-GEN <tspan fill="url(#p6Code)">WEB 3D</tspan></text>
+    <text x="35" y="108" font-family="sans-serif" font-size="11" fill="#94a3b8">WebGL • Three.js • GSAP • Creative Interactive Story</text>
+    
+    <!-- Code Box on the left -->
+    <rect x="35" y="130" width="220" height="135" rx="10" fill="#030712" stroke="#1e293b" stroke-width="1.5" />
+    <text x="48" y="152" font-family="monospace" font-size="10" fill="#f43f5e">const <tspan fill="#38bdf8">scene</tspan> = <tspan fill="#fbbf24">new THREE.Scene()</tspan>;</text>
+    <text x="48" y="172" font-family="monospace" font-size="10" fill="#f43f5e">const <tspan fill="#38bdf8">mesh</tspan> = <tspan fill="#fbbf24">createMediaMesh()</tspan>;</text>
+    <text x="48" y="192" font-family="monospace" font-size="10" fill="#94a3b8">// Smooth creative animation</text>
+    <text x="48" y="212" font-family="monospace" font-size="10" fill="#38bdf8">gsap.to<tspan fill="#ffffff">(mesh.rotation, {</tspan></text>
+    <text x="65" y="230" font-family="monospace" font-size="10" fill="#fbbf24">y: Math.PI * 2, duration: 4</text>
+    <text x="48" y="248" font-family="monospace" font-size="10" fill="#ffffff">});</text>
+
+    <!-- Right Side 3D Interactive Graphics Simulation -->
+    <g transform="translate(360, 180)">
+      <circle cx="0" cy="0" r="65" fill="none" stroke="url(#p6Code)" stroke-width="3" stroke-dasharray="14 10" />
+      <polygon points="0,-45 40,30 -40,30" fill="none" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="0" cy="5" r="25" fill="#f59e0b" opacity="0.3" filter="url(#p6Glow)" />
+      <circle cx="0" cy="5" r="14" fill="#fbbf24" />
+      
+      <!-- Coordinate Axes -->
+      <line x1="-50" y1="0" x2="50" y2="0" stroke="#38bdf8" stroke-width="1" opacity="0.4" />
+      <line x1="0" y1="-50" x2="0" y2="50" stroke="#38bdf8" stroke-width="1" opacity="0.4" />
+    </g>
+
+    <!-- CTA Button in mockup -->
+    <rect x="280" y="270" width="150" height="26" rx="13" fill="url(#p6Code)" />
+    <text x="355" y="287" font-family="sans-serif" font-size="11" font-weight="700" fill="#0f172a" text-anchor="middle">LAUNCH EXPERIMENT</text>
+  </g>
+</svg>

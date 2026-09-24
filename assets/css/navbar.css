@@ -1,0 +1,176 @@
+/* ==========================================================================
+   NAVIGATION BAR STYLES
+   Section: Navigation & Header
+   ========================================================================== */
+
+/* Navbar Container with Glassmorphism */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  padding: 1.1rem 0;
+  background-color: transparent;
+  transition: all var(--transition-normal);
+}
+
+/* Scrolled state with Backdrop Blur */
+.custom-navbar.scrolled {
+  padding: 0.75rem 0;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-glass);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Brand Logo Styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.5px;
+  color: var(--text-main) !important;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
+
+.brand-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #070b14;
+  font-size: 1.1rem;
+  box-shadow: var(--glow-yellow);
+  transition: transform var(--transition-normal);
+}
+
+.navbar-brand:hover .brand-icon-box {
+  transform: rotate(10deg) scale(1.05);
+}
+
+.brand-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--blue-400);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+
+/* Nav Items & Links */
+.navbar-nav {
+  gap: 0.35rem;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted) !important;
+  padding: 0.55rem 1rem !important;
+  border-radius: var(--radius-full);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-main) !important;
+  background-color: var(--border-glass);
+}
+
+/* Active Navigation Item */
+.nav-link.active {
+  color: #070b14 !important;
+  background: var(--grad-primary);
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.35);
+}
+
+[data-theme="light"] .nav-link.active {
+  color: #070b14 !important;
+}
+
+/* Theme Toggle Button (Dark / Light Mode) */
+.theme-toggle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  color: var(--yellow-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(8px);
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(30deg) scale(1.08);
+  border-color: var(--yellow-400);
+  box-shadow: var(--glow-yellow);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  color: var(--blue-600);
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  border-color: var(--blue-500);
+  box-shadow: var(--glow-blue);
+}
+
+/* Mobile Toggler */
+.custom-toggler {
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  color: var(--text-main);
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+}
+
+.custom-toggler:focus {
+  box-shadow: 0 0 0 2px var(--blue-400);
+  outline: none;
+}
+
+/* Mobile Responsive Drawer Styling */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--bg-surface);
+    margin-top: 1rem;
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-card);
+  }
+
+  .nav-link {
+    padding: 0.65rem 1rem !important;
+    margin-bottom: 0.25rem;
+  }
+}
